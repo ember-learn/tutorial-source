@@ -50,14 +50,14 @@ export default Component.extend({
 
 Now we have the basic class for our `ContactList` component and we can start looking at how this JavaScript class interacts with our component template.
 First, let's create a constructor so that we can set a property called `listTitle` to the string `My Contacts` in our `ContactList` class.
-In this constructor we need to call `this.super(...arguments)` before we use `this` so that Ember can setup the basic structure for our component.
+In this constructor we need to call `this._super(...arguments)` before we use `this` so that Ember can setup the basic structure for our component.
 
 ```js {data-filename="app/components/contact-list.js" data-diff="+4,+5,+6,+7,+8"}
 import Component from '@ember/component';
 
 export default Component.extend({
   init() {
-    this.super(...arguments);
+    this._super(...arguments);
 
     this.listTitle = 'My Contacts';
   }
@@ -96,7 +96,7 @@ import Component from '@ember/component';
 
 export default Component.extend({
   init() {
-    this.super(...arguments);
+    this._super(...arguments);
 
     this.listTitle = 'My Contacts';
     this.contacts = [

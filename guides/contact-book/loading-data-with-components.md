@@ -12,7 +12,7 @@ we can set the value of `contacts` back to our data array after 2000 millisecond
 ```js {data-filename="app/components/contact-list.js" data-diff="+6,+7,+8,+9,+10,+11,+12,+13,+14,+15,+16,+17,+18,-19,-20,-21,-22,-23,-24,-25,-26,-27,-28"}
 export default Component.extend({
   init() {
-    this.super(...arguments);
+    this._super(...arguments);
 
     this.listTitle = 'My Contacts';
     this.contacts = [];
@@ -54,7 +54,7 @@ Let's use `this.set` to update the `contacts` value for our list:
 ```js {data-filename="app/components/contact-list.js" data-diff="+5,+6,-7,-8,+11,+12,+13,+14,+15,+16,+17,+18,+19,+20,-21,-22,-23,-24,-25,-26,-27,-28,-29,-30"}
 export default Component.extend({
   init() {
-    this.super(...arguments);
+    this._super(...arguments);
 
     this.set('listTitle', 'My Contacts');
     this.set('contacts', []);
@@ -98,7 +98,7 @@ Then in the `setTimeout` let's reset `loading` to false before setting the value
 ```js {data-filename="app/components/contact-list.js" data-diff="+7,+9"}
 export default Component.extend({
   init() {
-    this.super(...arguments);
+    this._super(...arguments);
 
     this.set('listTitle', 'My Contacts');
     this.set('contacts', []);
@@ -172,7 +172,7 @@ Here, we'll parse the response as json, and we'll chain another `.then` call to 
 
 export default Component.extend({
   init() {
-    this.super(...arguments);
+    this._super(...arguments);
 
     this.set('listTitle', 'My Contacts');
     this.set('contacts', []);
