@@ -1,4 +1,4 @@
-## Ember Tutorials Soruce
+## Ember Tutorials Source
 
 This repository is part of a Work-In-Progress project to separate and expand on the Ember Tutorials in the [Ember Guides](https://guides.emberjs.com).
 
